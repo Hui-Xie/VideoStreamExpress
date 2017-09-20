@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FaceContainer" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEkAIAAAAAAUAAACAAAAAgAAAFAUKAQEAAEAgACEAAQ=</HashCode>
+      <FileName>FaceContainer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FrameProcess" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAIACAEIEgAAAAACAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FrameProcess.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CStreamExpressApp" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAEAAIAAMQAAAAIAAAAAAA=</HashCode>
+      <FileName>StreamExpress.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CStreamExpressDlg" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCEAIEAgAQAAAAoAjAiAAAAhEAAAAQQSBAAAAgQYCE=</HashCode>
+      <FileName>StreamExpressDlg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StreamProcess" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAACCAAAAAAgAABAAQQAAAA=</HashCode>
+      <FileName>StreamProcess.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="FrameProperty" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIAAEAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>FaceContainer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="SYS_STATUS" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAABAAAAAAAAAAAAAAAAAAAgABABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StreamExpress.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

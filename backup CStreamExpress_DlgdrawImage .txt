@@ -1,0 +1,126 @@
+/*
+
+void CStreamExpressDlg::drawImage(const cv::Mat& matFrame){
+
+	cv::Size size = matFrame.size();
+	int const width = size.width;
+	int const height = size.height;
+	int const channels = matFrame.channels();
+
+	COLORREF pixelRGB;
+	int i = 0;
+	int gray = 0;
+	int R = 0 , G = 0, B = 0;
+	for (int y = 0; y < height; y++){
+		for (int x = 0; x < width; x++){
+			if (1 == channels){
+				gray = *(matFrame.data + i++);
+				pixelRGB = RGB(gray, gray, gray);
+		    }
+			else if (3 == channels)
+			{
+				R = *(matFrame.data + i++);
+				G = *(matFrame.data + i++);
+				B = *(matFrame.data + i++);
+				pixelRGB = RGB(R, G, B);
+			}
+			else {
+				pixelRGB = 0;
+				AfxMessageBox("Error: channels != 1 or 3");
+			}
+			m_memoryDC.SetPixel(x, y, pixelRGB);
+		}
+	}
+	
+	drawFaceBox(150, 150, 70, 150);
+	//m_picture.GetDC()->BitBlt(0, 0, width, height, &m_memoryDC, 0, 0, SRCCOPY);
+	
+	int nBlocks = 10;
+	int blockW = width / nBlocks;
+	int blockH = height / nBlocks;
+
+	for (int xx = 0; xx < nBlocks; xx++){
+		for (int yy = nBlocks - 1; yy >= 0; yy--)  return;
+			//m_picture.GetDC()->BitBlt(xx*blockW, yy*blockH, width, height, &m_memoryDC, 
+			  //                        xx*blockW, yy*blockH, SRCCOPY);
+
+	}
+
+}
+
+void CStreamExpressDlg::drawSmallerImage(const cv::Mat& matFrame, int const scale){
+
+	cv::Size size = matFrame.size();
+	int const width = size.width /scale;
+	int const height = size.height /scale;
+	int const channels = matFrame.channels();
+
+	COLORREF pixelRGB;
+	int i = 0;
+	int gray = 0;
+	int R = 0, G = 0, B = 0;
+	for (int y = 0; y < height; y++){
+		for (int x = 0; x < width; x++){
+			if (1 == channels){
+				//gray = *(matFrame.data + (i++)*scale);
+				int xStart = x *scale;
+				int yStart = y *scale;
+				int xStop = (x + 1)*scale >= size.width ? size.width : (x + 1)*scale;
+				int yStop = (y + 1)*scale >= size.height ? size.height : (y + 1)*scale;
+				gray = 0;
+				int nCount = 0;
+				for (int xx = xStart; xx < xStop; xx++){
+					for (int yy = yStart; yy < yStop; yy++){
+						gray += *(matFrame.data + yy*size.width + xx);
+						nCount++;
+					}
+				}
+				gray /= nCount;
+				pixelRGB = RGB(gray, gray, gray);
+			}
+			else if (3 == channels)
+			{
+				int xStart = x *scale;
+				int yStart = y *scale;
+				int xStop = (x + 1)*scale >= size.width ? size.width : (x + 1)*scale;
+				int yStop = (y + 1)*scale >= size.height ? size.height : (y + 1)*scale;
+				R = 0; G = 0; B = 0;
+				int nCount = 0;
+				for (int xx = xStart; xx < xStop; xx++){
+					for (int yy = yStart; yy < yStop; yy++){
+						int offset = yy*size.width*channels + xx*channels;
+						R += *(matFrame.data + offset++);
+						G += *(matFrame.data + offset++);
+						B += *(matFrame.data + offset);
+						nCount++;
+					}
+				}
+				R = R / nCount;
+				G = G / nCount;
+				B = B / nCount;
+				pixelRGB = RGB(R, G, B);
+			}
+			else {
+				pixelRGB = 0;
+				AfxMessageBox("Error: channels != 1 or 3");
+			}
+			m_memoryDC.SetPixel(x, y, pixelRGB);
+		}
+	}
+
+	
+	int nBlocks = scale;
+	int blockW = width / nBlocks;
+	int blockH = height / nBlocks;
+
+	for (int xx = 0; xx < nBlocks; xx++){
+		for (int yy = nBlocks - 1; yy >= 0; yy--)
+			return;
+			//m_picture.GetDC()->BitBlt(xx*blockW, yy*blockH, width, height, &m_memoryDC,
+			//xx*blockW, yy*blockH, SRCCOPY);
+
+	}
+	
+}
+
+*/
